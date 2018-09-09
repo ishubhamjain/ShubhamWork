@@ -1,4 +1,4 @@
-package Runner;
+package MainRunner;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,12 +7,6 @@ import java.io.IOException;
  * @author Shubham Jain
  * */
 import org.junit.runner.RunWith;
-
-import MainRunner.AfterSuite;
-import MainRunner.BeforeSuite;
-import MainRunner.ExtendedCucumberOptions;
-import MainRunner.ExtendedCucumberRunner;
-import MainRunner.TestingConstants;
 import Utilities.AutomationLog;
 import Utilities.YmlReader;
 import automationframework.AppDriver;
@@ -31,7 +25,6 @@ import pageobjects.Page;
 		)
 @CucumberOptions(
 		features = "classpath:Features"
-		//,glue={"stepDefinition"}
 		,glue=TestingConstants.GLUE
 		,plugin = { "pretty", "html:target/cucumber-default-report", "json:target/cucumber.json","junit:target/cucumber.xml"}
 //		,tags= {"@smoke"}  // Run tests in groups

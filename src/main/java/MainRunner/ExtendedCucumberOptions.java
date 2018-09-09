@@ -1,4 +1,4 @@
-package Runner;
+package MainRunner;
 
 public @interface ExtendedCucumberOptions {
 

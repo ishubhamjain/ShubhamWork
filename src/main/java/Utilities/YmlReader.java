@@ -16,9 +16,7 @@ public class YmlReader {
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("configuration/database.properties"));	
 		String activeDatabase= prop.getProperty("activeDatabase");
-	
 		String value = ymlLogic(activeDatabase,key);
-		System.out.println(value);
 		return value;
 	}
 	

@@ -4,9 +4,6 @@ package automationframework;
  *
  */
 import java.util.Collection;
-
-import pageobjects.Page;
-
 //import mailReport.MyReporterListener;
 //import mailReport.SendMailClass;
 

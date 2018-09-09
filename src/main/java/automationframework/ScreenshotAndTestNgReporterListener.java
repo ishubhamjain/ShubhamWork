@@ -10,11 +10,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
-/*import org.testng.ITestResult;
-import org.testng.Reporter;
-import org.testng.TestListenerAdapter;*/
-
-import cucumber.api.Scenario;
 import pageobjects.Page;
 
 import java.io.File;

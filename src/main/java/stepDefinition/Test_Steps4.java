@@ -1,29 +1,16 @@
 package stepDefinition;
-import java.sql.ResultSet;
 /**
  * @author Shubham Jain
  * */
-import java.util.HashMap;
-
-import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import DataBases.JdbcMYSQLServerConnection;
-import automationframework.AppDriver;
 import automationframework.AutomationLog;
 import automationframework.AutomationTestCaseVerification;
-import automationframework.ScreenshotAndTestNgReporterListener;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageobjects.CueContactUsPage;
 import pageobjects.CueHomePage;

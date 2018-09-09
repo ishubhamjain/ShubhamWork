@@ -2,14 +2,6 @@ package Runner;
 
 import java.lang.annotation.Annotation;
 
-import org.junit.runner.notification.Failure;
-import org.junit.runner.notification.RunListener;
-import org.openqa.selenium.WebDriver;
-
-import automationframework.AutomationLog;
-import automationframework.ScreenshotAndTestNgReporterListener;
-import pageobjects.Page;
-
 public class CucumberOptions implements ExtendedCucumberOptions{
 
 /*	public CucumberOptions(WebDriver driver) {

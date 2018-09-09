@@ -1,23 +1,12 @@
 package Runner;
 
-import org.junit.Rule;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
 /**
  * @author Shubham Jain
  * */
 import org.junit.runner.RunWith;
 import automationframework.AppDriver;
 import automationframework.AutomationLog;
-import automationframework.ScreenshotAndTestNgReporterListener;
 import cucumber.api.CucumberOptions;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.junit.Cucumber;
-/*import net.masterthought.cucumber.Configuration;
-import net.masterthought.cucumber.ReportBuilder;
-import net.masterthought.cucumber.ReportParser;
-import net.masterthought.cucumber.Reportable;*/
 import pageobjects.Page;
  
 //@RunWith(Cucumber.class)

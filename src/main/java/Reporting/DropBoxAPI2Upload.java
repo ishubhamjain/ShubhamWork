@@ -6,7 +6,6 @@ package Reporting;
 import com.dropbox.core.DbxAuthInfo;
 import com.dropbox.core.DbxException;
 import com.dropbox.core.DbxRequestConfig;
-import com.dropbox.core.DbxWebAuth;
 import com.dropbox.core.NetworkIOException;
 import com.dropbox.core.RetryException;
 import com.dropbox.core.json.JsonReader;

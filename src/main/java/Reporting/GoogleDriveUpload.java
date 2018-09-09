@@ -19,7 +19,6 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.FileList;
 import com.google.api.services.admin.directory.Directory;
-import com.google.api.services.admin.directory.model.Users;
 import com.google.api.services.drive.Drive;
 
 

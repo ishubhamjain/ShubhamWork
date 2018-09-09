@@ -1,10 +1,9 @@
 package automationframework;
+import java.time.Duration;
 /**
  * @author Shubham Jain
  *
  */
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -30,9 +29,10 @@ public class WaitFor
         long globalPageElementPollingTimeout = Long.parseLong(globalPageElementPollingTimeoutProperty);
 
         Wait<WebDriver> wait =
-                new FluentWait<WebDriver>(driver).withTimeout(globalPageTimeout, TimeUnit.SECONDS)
-                                                 .pollingEvery(globalPageElementPollingTimeout, TimeUnit.SECONDS)
-                                                 .ignoring(NoSuchElementException.class);
+        		new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(globalPageTimeout))
+                .pollingEvery(Duration.ofMillis(globalPageElementPollingTimeout)).ignoring(NoSuchElementException.class);
+
+
 
         return wait.until(new Function<WebDriver, WebElement>()
                 {

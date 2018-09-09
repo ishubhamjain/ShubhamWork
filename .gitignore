@@ -1,0 +1,7 @@
+target/
+configuration/
+*.classpath
+*.project
+.settings
+install/
+Dependencies/

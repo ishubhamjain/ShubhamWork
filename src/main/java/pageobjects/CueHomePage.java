@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import automationframework.AutomationLog;
+import Utilities.AutomationLog;
 
 public class CueHomePage extends Page  {
 	private WebElement element = null;

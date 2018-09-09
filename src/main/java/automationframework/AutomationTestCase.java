@@ -4,6 +4,9 @@ package automationframework;
  *
  */
 import java.util.HashMap;
+
+import Utilities.AutomationLog;
+import Utilities.Configuration;
 import cucumber.api.java.Before;
 import pageobjects.Homepage;
 import pageobjects.LoginPage;

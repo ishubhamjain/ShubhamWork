@@ -1,4 +1,4 @@
-package automationframework;
+package Utilities;
 import java.time.Duration;
 /**
  * @author Shubham Jain

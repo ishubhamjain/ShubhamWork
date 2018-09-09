@@ -8,10 +8,8 @@ import org.junit.runner.Runner;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
 
-import automationframework.AutomationLog;
-import automationframework.ScreenshotAndTestNgReporterListener;
-
-
+import Utilities.AutomationLog;
+import Utilities.ScreenshotAndTestNgReporterListener;
 import cucumber.api.junit.Cucumber;
 
 public class ExtendedCucumberRunner extends Runner {

@@ -7,6 +7,8 @@ import java.util.Collection;
 //import mailReport.MyReporterListener;
 //import mailReport.SendMailClass;
 
+import Utilities.AutomationLog;
+
 public abstract class AutomationTestCaseVerification extends AutomationTestCase
 {
     public AutomationTestCaseVerification()

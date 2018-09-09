@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import automationframework.AutomationLog;
+import Utilities.AutomationLog;
 
 
 public class Homepage extends Page 

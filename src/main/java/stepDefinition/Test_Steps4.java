@@ -6,7 +6,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import automationframework.AutomationLog;
+
+import Utilities.AutomationLog;
 import automationframework.AutomationTestCaseVerification;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;

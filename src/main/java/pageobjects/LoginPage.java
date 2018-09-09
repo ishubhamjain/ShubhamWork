@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import automationframework.AutomationLog;
-import automationframework.Configuration;
+import Utilities.AutomationLog;
+import Utilities.Configuration;
 
 import org.junit.Assert;
 

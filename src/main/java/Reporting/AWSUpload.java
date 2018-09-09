@@ -13,7 +13,7 @@ import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
 import org.apache.commons.exec.ExecuteException;
 
-import automationframework.AutomationLog;
+import Utilities.AutomationLog;
 /**
  * Note : This Code only working and designed for Linux/Mac platform. Call/Use this class for linux/Mac platform only.
  * */

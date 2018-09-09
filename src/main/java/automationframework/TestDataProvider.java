@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
+import Utilities.AutomationLog;
+import Utilities.Configuration;
+
 public class TestDataProvider 
 {
     private static String TESTDATA_FILE_EXTENSION = ".csv";

@@ -1,4 +1,7 @@
 package automationframework;
+
+import Utilities.Configuration;
+
 /**
  * @author Shubham Jain
  *

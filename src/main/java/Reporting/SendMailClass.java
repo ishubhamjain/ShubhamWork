@@ -8,7 +8,9 @@ import javax.activation.DataSource;
 import javax.activation.FileDataSource;
 import javax.mail.*;
 import javax.mail.internet.*;
-import automationframework.Configuration;
+
+import Utilities.Configuration;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

@@ -19,8 +19,8 @@ import com.dropbox.core.v2.files.UploadSessionFinishErrorException;
 import com.dropbox.core.v2.files.UploadSessionLookupErrorException;
 import com.dropbox.core.v2.files.WriteMode;
 
-import automationframework.AutomationLog;
-import automationframework.Configuration;
+import Utilities.AutomationLog;
+import Utilities.Configuration;
 
 import java.io.File;
 import java.io.FileInputStream;

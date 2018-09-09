@@ -1,4 +1,4 @@
-package automationframework;
+package Utilities;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

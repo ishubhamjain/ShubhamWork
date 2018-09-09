@@ -8,26 +8,12 @@ import javax.activation.DataSource;
 import javax.activation.FileDataSource;
 import javax.mail.*;
 import javax.mail.internet.*;
-import javax.mail.internet.MimeMessage.RecipientType;
-
-import org.apache.commons.io.IOUtils;
-import org.openqa.selenium.remote.BrowserType;
-
-
-import automationframework.AppDriver;
 import automationframework.Configuration;
-import automationframework.ExcelLib;
-import pageobjects.Page;
-
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
+
 /**
  * Note : This Class zip the folder of reports and sent the email via gmail. Make sure files do not contains any JS files or extention banned by gmail. 
  * Don't use automation log in this class, It will override all before logs of the same session

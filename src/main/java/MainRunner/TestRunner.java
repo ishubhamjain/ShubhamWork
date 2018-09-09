@@ -16,7 +16,7 @@ import pageobjects.Page;
 //@RunWith(Cucumber.class)
 @ExtendedCucumberOptions(
 		jsonReport = "target/cucumber.json",
-		retryCount = 3,
+		retryCount = 0,
 		detailedReport = true,
 		detailedAggregatedReport = true,
 		overviewReport = true,

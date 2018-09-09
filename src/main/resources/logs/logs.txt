@@ -1,21 +1,15 @@
-09/09/2018 04:31:55.365 - [Shubham Automation] - [INFO] - java.util.logging.ConsoleHandler@55fe41ea
-09/09/2018 04:31:55.366 - [Shubham Automation] - [INFO] - [ TestRunner : setUp ] In Before Suite
-09/09/2018 04:31:55.750 - [Shubham Automation] - [INFO] - [ AutomationTestCase : setup ] Begin Test case : Test_Steps4
-09/09/2018 04:32:27.215 - [Shubham Automation] - [SEVERE] - [ Homepage : button_MyAccount ] My Account Link is not found on Home Page
-09/09/2018 04:32:27.216 - [Shubham Automation] - [SEVERE] - [ LoginPage : doLoginWithCredentials ] Login Failed
-09/09/2018 04:32:27.217 - [Shubham Automation] - [SEVERE] - [ LoginPage : doSuccessfulLogin ] Login failed.
-09/09/2018 04:32:27.223 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invoke ] Setting up Single Instance Type invokation
-09/09/2018 04:32:27.224 - [Shubham Automation] - [INFO] - [ CueHomePage : By_link_Contact ] My contact Link is found on Home Page
-09/09/2018 04:32:27.322 - [Shubham Automation] - [INFO] - [ CueHomePage : By_link_Contact ] My contact Link is found on Home Page
-09/09/2018 04:32:27.348 - [Shubham Automation] - [INFO] - [ CueHomePage : link_Contact ] My contact Link is found on Home Page
-09/09/2018 04:32:35.977 - [Shubham Automation] - [INFO] - [ CueContactUsPage : textbox_name ] My name is found on Home Page
-09/09/2018 04:32:36.246 - [Shubham Automation] - [INFO] - [ CueContactUsPage : textbox_email ] My name is found on Home Page
-09/09/2018 04:32:36.595 - [Shubham Automation] - [INFO] - [ CueContactUsPage : textbox_message ] My name is found on Home Page
-09/09/2018 04:32:36.751 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invokeData ] Begin Test case : Test_Steps4
-09/09/2018 04:32:46.768 - [Shubham Automation] - [SEVERE] - [ Homepage : button_MyAccount ] My Account Link is not found on Home Page
-09/09/2018 04:32:46.769 - [Shubham Automation] - [SEVERE] - [ LoginPage : doLoginWithCredentials ] Login Failed
-09/09/2018 04:32:46.769 - [Shubham Automation] - [SEVERE] - [ LoginPage : doSuccessfulLogin ] Login failed.
-09/09/2018 04:32:46.772 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invoke ] Instance is already invoked
-09/09/2018 04:32:56.839 - [Shubham Automation] - [SEVERE] - [ CueContactUsPage : textbox_company ] My name is not found on Home Page
-09/09/2018 04:32:57.279 - [Shubham Automation] - [SEVERE] - [ Test_Steps4 : afterMethod ] Screenshot has been taken and embed with HTML report
-09/09/2018 04:32:58.314 - [Shubham Automation] - [INFO] - [ TestRunner : tearDown ] Quiting Webdriver Instances
+09/09/2018 05:29:57.931 - [Shubham Automation] - [INFO] - java.util.logging.ConsoleHandler@60015ef5
+09/09/2018 05:29:57.932 - [Shubham Automation] - [INFO] - [ TestRunner : setUp ] In Before Suite
+09/09/2018 05:29:58.401 - [Shubham Automation] - [INFO] - [ AutomationTestCase : setup ] Begin Test case : Test_Steps4
+09/09/2018 05:30:22.977 - [Shubham Automation] - [INFO] - [ AutomationTestCase : setup ] Begin Test case : Login done
+09/09/2018 05:30:22.981 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invoke ] Setting up Single Instance Type invokation
+09/09/2018 05:30:22.982 - [Shubham Automation] - [INFO] - [ CueHomePage : By_link_Contact ] My contact Link is found on Home Page
+09/09/2018 05:30:23.088 - [Shubham Automation] - [INFO] - [ CueHomePage : By_link_Contact ] My contact Link is found on Home Page
+09/09/2018 05:30:23.118 - [Shubham Automation] - [INFO] - [ CueHomePage : link_Contact ] My contact Link is found on Home Page
+09/09/2018 05:30:23.911 - [Shubham Automation] - [SEVERE] - [ Test_Steps4 : afterMethod ] Screenshot has been taken and embed with HTML report
+09/09/2018 05:30:23.924 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invokeData ] Begin Test case : Test_Steps4
+09/09/2018 05:30:23.926 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invokeData ] Begin Test case : Login done
+09/09/2018 05:30:23.927 - [Shubham Automation] - [INFO] - [ AutomationTestCase : invoke ] Instance is already invoked
+09/09/2018 05:30:33.993 - [Shubham Automation] - [SEVERE] - [ CueContactUsPage : textbox_company ] My name is not found on Home Page
+09/09/2018 05:30:34.575 - [Shubham Automation] - [SEVERE] - [ Test_Steps4 : afterMethod ] Screenshot has been taken and embed with HTML report
+09/09/2018 05:30:35.538 - [Shubham Automation] - [INFO] - [ TestRunner : tearDown ] Quiting Webdriver Instances

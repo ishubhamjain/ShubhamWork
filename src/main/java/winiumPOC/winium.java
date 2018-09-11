@@ -38,11 +38,12 @@ public class winium {
         }
         
 /*        System.out.println("process name"+ getProcessIDs("WiniumDriver.exe"));
-       String processID = getProcessIDs("WiniumDriver.exe").get(0);*/
+       String processID = getProcessIDs("WiniumDriver.exe").get(0);*/  // to get the process id
 		//p.waitFor();
 		//////////////////////////////////////
 		
-		/*Desktop desktop = Desktop.getDesktop();
+		/* .. Another way to run Winium exe
+		 * Desktop desktop = Desktop.getDesktop();
 	    desktop.open(new File("E:\\workspace\\ShubhamWork\\src\\main\\resources\\DriverBinaries\\WiniumDriver.exe"));
 	   */
 		

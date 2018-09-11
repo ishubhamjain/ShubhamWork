@@ -53,7 +53,7 @@ public class winium {
 		option.setApplicationPath(appPath);
         option.setDebugConnectToRunningApp(false);
         option.setLaunchDelay(2);
-		 System.setProperty("webdriver.winium.driver.desktop","E:\\workspace\\ShubhamWork\\src\\main\\resources\\DriverBinaries\\WiniumDriver.exe");
+		 //System.setProperty("webdriver.winium.driver.desktop","E:\\workspace\\ShubhamWork\\src\\main\\resources\\DriverBinaries\\WiniumDriver.exe");
 		driver = new WiniumDriver(new URL("http://localhost:9999"), option);
 		//driver = new WiniumDriver(service, option);
 		System.out.println("hello");
@@ -73,8 +73,7 @@ public class winium {
         System.out.println("start exit");
 
         Runtime.getRuntime().exec("taskkill /F /IM Winium.Desktop.Driver.exe");
-        Runtime.getRuntime().exec("taskkill /F /IM calc.exe");
-        Runtime.getRuntime().exec("taskkill /F /IM Calculator");
+        Runtime.getRuntime().exec("taskkill /F /IM Calculator.exe");
         System.out.println("start exit 3");
         
 	}

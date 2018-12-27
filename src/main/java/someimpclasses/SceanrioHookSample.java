@@ -22,11 +22,11 @@ public class SceanrioHookSample {
 			String rawFeatureName = scenario.getId().split(";")[0].replace("-", " ");
 			featureName = rawFeatureName.substring(0, 1).toUpperCase() + rawFeatureName.substring(1);
 			AutomationLog.info("Feature Name =" + featureName);
-			if (featureName.equalsIgnoreCase("Paper confirmation generation for various products")) {
+			if (featureName.equalsIgnoreCase("generation for various products")) {
 				sheetName = "PaperConfirmation";
-			} else if (featureName.equalsIgnoreCase("DTCC confirmation generation for various products")) {
+			} else if (featureName.equalsIgnoreCase("generation for various products")) {
 				sheetName = "DTCCConfirm";
-			} else if (featureName.equalsIgnoreCase("Swapswire confirmation generation for various products")) {
+			} else if (featureName.equalsIgnoreCase("generation for various products")) {
 				sheetName = "SwapswireConfirm";
 			} else {
 				AutomationLog.info("Data Sheet not avaiable for feature = " + featureName);
@@ -42,10 +42,10 @@ public class SceanrioHookSample {
 			AutomationLog.info("Scenario name = " + scenario.getName());
 			AutomationLog.info("Sheet Data = " + sheetval);
 			/*
-			 * bean.setTypeOfConfirm(sheetval.get(1)); bean.setProduct(sheetval.get(2));
-			 * bean.setPostTradeEvent(sheetval.get(3));
-			 * bean.setWorkflowStep(sheetval.get(4)); bean.setState(sheetval.get(5));
-			 * bean.setDealEvent(sheetval.get(6));
+			 * bean.setTypeOf(sheetval.get(1)); bean.setProduct(sheetval.get(2));
+			 * bean.setEvent(sheetval.get(3));
+			 * bean.setWorkflow(sheetval.get(4)); bean.setState(sheetval.get(5));
+			 * bean.setDea(sheetval.get(6));
 			 */
 
 			AutomationLog.info("Beans sets");

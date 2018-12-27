@@ -1,26 +1,18 @@
 package winiumPOC;
 
-import java.awt.Desktop;
+
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.winium.DesktopOptions;
 import org.openqa.selenium.winium.WiniumDriver;
-import org.openqa.selenium.winium.WiniumDriverService;
 
-import com.dropbox.core.v2.teamlog.TimeUnit;
-import com.gargoylesoftware.css.parser.condition.PseudoClassCondition;
 
-import ch.ethz.ssh2.StreamGobbler;
+
 //note: https://stackoverflow.com/questions/52246372/which-tool-is-compatible-with-windows-10-for-extract-window-element-for-winium/52246647#52246647
 public class winium {
 	static WiniumDriver driver = null;

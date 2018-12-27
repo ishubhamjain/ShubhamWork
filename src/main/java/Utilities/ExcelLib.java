@@ -98,7 +98,7 @@ public class ExcelLib {
 			}
 			return sheetval;
 		} catch (Exception ex) {
-			//AutomationLog.error(ex.getMessage(), ex);
+			AutomationLog.error(ex.getMessage(), ex);
 		}
 		finally {
 			workbook.close();

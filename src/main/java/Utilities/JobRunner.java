@@ -88,13 +88,13 @@ public class JobRunner {
 				try {
 					Thread.sleep(1000);
 				} catch (Exception ee) {
-					//AutomationLog.error(ee.getMessage(),ee);
+					AutomationLog.error(ee.getMessage(),ee);
 				}
 			}
 			channel.disconnect();
 			session.disconnect();
 		} catch (Exception e) {
-			//AutomationLog.error(e.getMessage(),e);
+			AutomationLog.error(e.getMessage(),e);
 		}
 	}
 	
@@ -113,7 +113,7 @@ public class JobRunner {
 			sftpChannel.disconnect();
 			session.disconnect();
 		} catch (Exception ex) {
-			//AutomationLog.error(ex.getMessage(),ex);
+			AutomationLog.error(ex.getMessage(),ex);
 		}
 	}
 	
@@ -135,7 +135,7 @@ public class JobRunner {
 			sftpChannel.disconnect();
 			session.disconnect();
 		} catch (Exception ex) {
-			//AutomationLog.error(ex.getMessage(),ex);
+			AutomationLog.error(ex.getMessage(),ex);
 		}
 	}
 	

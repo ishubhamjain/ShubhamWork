@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import Utilities.Configuration;
 
 public class TestDataProvider 
@@ -39,11 +39,11 @@ public class TestDataProvider
         }
         catch(FileNotFoundException fnfe)
         {
-        	AutomationLog.info("Not able to read config file due to " + fnfe.toString() + " test data loading failed.");
+        	AutomationLogCustom.info("Not able to read config file due to " + fnfe.toString() + " test data loading failed.");
         }
         catch (Exception e) 
         {
-            AutomationLog.info("Not able to read config file due to " + e.toString() + " test data loading failed.");
+            AutomationLogCustom.info("Not able to read config file due to " + e.toString() + " test data loading failed.");
         }
         finally
         {
@@ -56,7 +56,7 @@ public class TestDataProvider
             }
             catch (IOException e) 
             {
-                AutomationLog.info("Not able to close config file due to " + e.toString() + " test data might not have loaded correctly.");
+                AutomationLogCustom.info("Not able to close config file due to " + e.toString() + " test data might not have loaded correctly.");
             }
         }
     }

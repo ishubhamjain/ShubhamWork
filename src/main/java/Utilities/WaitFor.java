@@ -124,7 +124,7 @@ public class WaitFor
         }
         catch (Throwable pageLoadWaitError)
         {
-            AutomationLog.info("Timeout during page load");
+            AutomationLogCustom.info("Timeout during page load");
         }
     }
 

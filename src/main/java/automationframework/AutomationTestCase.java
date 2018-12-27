@@ -5,7 +5,7 @@ package automationframework;
  */
 import java.util.HashMap;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import Utilities.Configuration;
 import cucumber.api.java.Before;
 import pageobjects.Homepage;
@@ -44,38 +44,38 @@ public class AutomationTestCase
 	     if (!initialized){
 	            initialized = true;
 	              setup();   
-	            AutomationLog.info("Setting up Single Instance Type invokation");
+	            AutomationLogCustom.info("Setting up Single Instance Type invokation");
 	        }
 			else {
 				invokeData();
-				AutomationLog.info("Instance is already invoked");
+				AutomationLogCustom.info("Instance is already invoked");
 			}
 	      }
     	else if(initializationType.equalsIgnoreCase("multiple")) {
     	 //   consetup();
  	          setup();    
-    		  AutomationLog.info("Setting up Multiple Instance Type invokation");
+    		  AutomationLogCustom.info("Setting up Multiple Instance Type invokation");
     	}
     	else {
-    		AutomationLog.error("Wrong Instance Type invokation parameter. Please check the configurations");
+    		AutomationLogCustom.error("Wrong Instance Type invokation parameter. Please check the configurations");
     	}
     }
     catch(Exception ex) {
-    	AutomationLog.error("Exception occured in setup");
-    	AutomationLog.error(ex.getMessage());
+    	AutomationLogCustom.error("Exception occured in setup");
+    	AutomationLogCustom.error(ex.getMessage());
     	ex.printStackTrace();
     }
   } 
     
     public void setup() 
     {
-        AutomationLog.startTestCase(executingTestCaseName);
+        AutomationLogCustom.startTestCase(executingTestCaseName);
         String browserToUse = Configuration.getConfigurationValueForProperty("browser");
         new Page(AppDriver.getDriver(browserToUse));
     	Credentials ValidCredentials = getGlobalUserCredentials();
         try {
         	loginPage.doSuccessfulLogin(ValidCredentials.getEmail(), ValidCredentials.getPassword());
-        	AutomationLog.startTestCase("Login done");
+        	AutomationLogCustom.startTestCase("Login done");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -94,12 +94,12 @@ public class AutomationTestCase
     
     public void invokeData() 
     {
-        AutomationLog.startTestCase(executingTestCaseName);
+        AutomationLogCustom.startTestCase(executingTestCaseName);
         Credentials ValidCredentials = getGlobalUserCredentials();
     	if(LoginType.equalsIgnoreCase("yes")) {
             try {
             	loginPage.doSuccessfulLogin(ValidCredentials.getEmail(), ValidCredentials.getPassword());
-            	AutomationLog.startTestCase("Login done");
+            	AutomationLogCustom.startTestCase("Login done");
     		} catch (Exception e) {
     			System.out.println(e.getMessage());
     		}
@@ -108,16 +108,16 @@ public class AutomationTestCase
     			 loginInitialized = true;
     	          try {
     	            	loginPage.doSuccessfulLogin(ValidCredentials.getEmail(), ValidCredentials.getPassword());
-    	            	AutomationLog.startTestCase("Login done");
+    	            	AutomationLogCustom.startTestCase("Login done");
     	    		} catch (Exception e) {
     	    			System.out.println(e.getMessage());
     	    		}
     		 }
     		 else {
-    	    		AutomationLog.startTestCase("Continues Login session");
+    	    		AutomationLogCustom.startTestCase("Continues Login session");
     		 }
     	}else {
-    		AutomationLog.startTestCase("check configiration login-each-session parameter is wrong");
+    		AutomationLogCustom.startTestCase("check configiration login-each-session parameter is wrong");
     	}
         testCaseData = TestDataProvider.getTestData(executingTestCaseFileName);
     }
@@ -135,7 +135,7 @@ public class AutomationTestCase
 
     //	Page.driver.quit();  // As per suggestion by shubham
 
-        AutomationLog.endTestCase(executingTestCaseName);
+        AutomationLogCustom.endTestCase(executingTestCaseName);
         
         if (testCaseData != null)
             testCaseData.clear();
@@ -145,13 +145,13 @@ public class AutomationTestCase
 
     public void testcasePassed(String customMessage) 
     {
-        AutomationLog.info(executingTestCaseName + " " + customMessage);
+        AutomationLogCustom.info(executingTestCaseName + " " + customMessage);
     }
 
     public void testcaseFailed(String customMessage) 
     {
        // AutomationLog.info(executingTestCaseName + " " + customMessage);
-    	AutomationLog.info("Failed report to send = " + customMessage);
+    	AutomationLogCustom.info("Failed report to send = " + customMessage);
 		//Quitting the driver and all pages
 		AppDriver.clearBrowserContext(Page.driver);
     }    

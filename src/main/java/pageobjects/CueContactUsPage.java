@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 
 public class CueContactUsPage extends Page  {
 	private WebElement element = null;
@@ -21,9 +21,9 @@ public class CueContactUsPage extends Page  {
 	public WebElement textbox_name() throws Exception {
 		try {
 			element = driver.findElement(By.name("firstname"));
-			AutomationLog.info("My name is found on Home Page");
+			AutomationLogCustom.info("My name is found on Home Page");
 		} catch (Exception e) {
-			AutomationLog.error("My name is not found on Home Page");
+			AutomationLogCustom.error("My name is not found on Home Page");
 			throw (e);
 		}
 		return element;
@@ -32,9 +32,9 @@ public class CueContactUsPage extends Page  {
 	public WebElement textbox_email() throws Exception {
 		try {
 			element = driver.findElement(By.name("email"));
-			AutomationLog.info("My name is found on Home Page");
+			AutomationLogCustom.info("My name is found on Home Page");
 		} catch (Exception e) {
-			AutomationLog.error("My name is not found on Home Page");
+			AutomationLogCustom.error("My name is not found on Home Page");
 			throw (e);
 		}
 		return element;
@@ -43,9 +43,9 @@ public class CueContactUsPage extends Page  {
 	public WebElement textbox_message() throws Exception {
 		try {
 			element = driver.findElement(By.name("message"));
-			AutomationLog.info("My name is found on Home Page");
+			AutomationLogCustom.info("My name is found on Home Page");
 		} catch (Exception e) {
-			AutomationLog.error("My name is not found on Home Page");
+			AutomationLogCustom.error("My name is not found on Home Page");
 			throw (e);
 		}
 		return element;
@@ -54,9 +54,9 @@ public class CueContactUsPage extends Page  {
 	public WebElement textbox_company() throws Exception {
 		try {
 			element = driver.findElement(By.name("dasdasd"));
-			AutomationLog.info("My name is found on Home Page");
+			AutomationLogCustom.info("My name is found on Home Page");
 		} catch (Exception e) {
-			AutomationLog.error("My name is not found on Home Page");
+			AutomationLogCustom.error("My name is not found on Home Page");
 			throw (e);
 		}
 		return element;

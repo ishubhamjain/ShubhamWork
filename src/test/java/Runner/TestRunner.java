@@ -10,14 +10,13 @@ import java.io.IOException;
  * */
 import org.junit.runner.RunWith;
 
+import DataBases.DataBaseSource;
 import MainRunner.AfterSuite;
 import MainRunner.BeforeSuite;
 import MainRunner.ExtendedCucumberOptions;
 import MainRunner.ExtendedCucumberRunner;
 import MainRunner.TestingConstants;
 import Utilities.AutomationLog;
-import Utilities.YmlReader;
-import automationframework.AppDriver;
 import cucumber.api.CucumberOptions;
 import pageobjects.Page;
  
@@ -46,13 +45,12 @@ public class TestRunner {
     @BeforeSuite
     public static void setUp() throws FileNotFoundException, IOException {
     	AutomationLog.info("In Before Suite");
-    	System.out.println(YmlReader.ReadYmlProperty("databasName"));
-    	
+    	DataBaseSource.getInstance();
     }
     @AfterSuite
     public static void tearDown() {
         System.out.println("In After Suite");
-        AppDriver.clearBrowserContext(Page.driver);
+      //  AppDriver.clearBrowserContext(Page.driver);
         AutomationLog.info("Quiting Webdriver Instances");
    }     
 }

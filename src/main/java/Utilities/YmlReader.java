@@ -5,39 +5,73 @@ package Utilities;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
 
 import com.esotericsoftware.yamlbeans.YamlException;
 import com.esotericsoftware.yamlbeans.YamlReader;
 
+import DataBases.FunctionalId;
+
+
 public class YmlReader {
+
+	public static Map<String,FunctionalId> functionId = new HashMap<>();
 	
-	public static String ReadYmlProperty(String key) throws FileNotFoundException, IOException {
+	public static String readYmlProperty() {
 		Properties prop = new Properties();
-		prop.load(new FileInputStream("configuration/database.properties"));	
-		String activeDatabase= prop.getProperty("activeDatabase");
-		String value = ymlLogic(activeDatabase,key);
-		return value;
+		String activeDB = null;
+		try {
+			prop.load(new FileInputStream("configuration/database.properties"));
+			String[] activeDatabase = prop.getProperty("activeDatabase").split(",");
+			for(String db : activeDatabase) {
+				FunctionalId id = ymlLogic(db);
+				functionId.put(db, id);
+			}
+			if(functionId.isEmpty()) {
+				throw new Exception("Active DB Profile not found");
+			}
+		} catch (Exception ex) {
+			AutomationLog.error(ex.getMessage());
+		}
+		return activeDB;
+	}
+
+	private static FunctionalId ymlLogic(String activeDatabase) throws YamlException, FileNotFoundException {
+		YamlReader reader;
+		reader = new YamlReader(new FileReader("configuration/config.yml"));
+		Object object = reader.read();
+		Map map = (Map) object;
+		Map map2 = (Map) map.get("Agents");
+		System.out.println("test"+map2);
+		return mapFunctionalIdToBean((Map<String, String>) map2.get(activeDatabase),activeDatabase);
 	}
 	
-	public static String ymlLogic(String activeDatabase, String key) throws YamlException {
-		String value;
-		YamlReader yml;
-		try {
-			yml = new YamlReader(new FileReader("configuration/config.yml"));
-			Object object = yml.read();
-			Map map = (Map) object;
-			Map map2 = (Map) map.get("Agents");
-			Map<String,String> map3 = (Map<String, String>) map2.get(activeDatabase);
-			value=map3.get(key);
-			
-			return value;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	private static FunctionalId mapFunctionalIdToBean(Map<String, String> map,String activeDatabase) {
+		FunctionalId id = new FunctionalId();
+		id.setId(activeDatabase);
+		id.setDbType(map.get("databaseType"));
+		id.setHost(map.get("hostName"));
+		id.setPort(map.get("port"));
+		id.setUsername(map.get("userName"));
+		id.setPassword(map.get("password"));
+		id.setUseFunctionalId(map.get("usefunctionalid").equalsIgnoreCase("true") ? true :false);
+		id.setEncryptPassword(map.get("encrytpassword"));
+		return id;
+	}
+
+/*	public static String getProperty(String key) {
+		if(functionId.isEmpty()) {
+			readYmlProperty();
 		}
-		return "";
+		return functionId.get(key);
+		
+	}*/
+	public static void main(String[] args) {
+		readYmlProperty();
+		System.out.println(functionId.size());
 	}
 }
+

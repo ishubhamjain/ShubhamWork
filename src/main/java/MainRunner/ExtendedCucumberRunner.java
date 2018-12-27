@@ -10,7 +10,7 @@ import org.junit.runner.Runner;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import Utilities.ScreenshotAndTestNgReporterListener;
 import cucumber.api.junit.Cucumber;
 
@@ -65,11 +65,11 @@ public class ExtendedCucumberRunner extends Runner {
      //   super.testFailure(failure);
         if (!failure.getDescription().isSuite()) {
         	ScreenshotAndTestNgReporterListener.customScreenshot();
-        	AutomationLog.error("In Custom Failer Class of Junit");
+        	AutomationLogCustom.error("In Custom Failer Class of Junit");
             System.out.println("FAILED!!!!!"); //Here pass your screenshot capture event
         }
     	ScreenshotAndTestNgReporterListener.customScreenshot();
-    	AutomationLog.error("In Custom Failer Class of Junit");
+    	AutomationLogCustom.error("In Custom Failer Class of Junit");
         System.out.println("FAILED!!!!!"); //Here pass your screenshot capture event
     }
     

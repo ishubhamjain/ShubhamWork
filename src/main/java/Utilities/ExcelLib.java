@@ -7,13 +7,21 @@ package Utilities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelLib {
 
-	String xlpath = Configuration.getExcelFile();
+	static String xlpath = Configuration.getExcelFile();
 	public String getXLcellValue(String sheetName, int rowNum, int cellNum)
 	{
 		try{
@@ -71,5 +79,30 @@ public class ExcelLib {
 			
 		}
 		
+	}
+	
+	public static List<String> getRowValues(String sheetName, String scenario) throws IOException {
+		List<String> sheetval = null;
+		HSSFWorkbook workbook = null;
+		try {
+			POIFSFileSystem fileSystem = new POIFSFileSystem(new FileInputStream(xlpath));
+			workbook = new HSSFWorkbook(fileSystem);
+			HSSFSheet sheet = workbook.getSheet(sheetName); // Get data as per sheet name
+			sheetval = new ArrayList<String>();
+			for (Row row : sheet) { // For each Row.
+				Cell cell = row.getCell(0); // Get the Cell at the Index / Column you want.
+				if (cell.getStringCellValue().equalsIgnoreCase(scenario)) {
+					for (int i = 0; i <= cell.getRow().getLastCellNum() - 1; i++)
+						sheetval.add(cell.getRow().getCell(i).toString());
+				}
+			}
+			return sheetval;
+		} catch (Exception ex) {
+			//AutomationLog.error(ex.getMessage(), ex);
+		}
+		finally {
+			workbook.close();
+		}
+		return sheetval;
 	}
 }

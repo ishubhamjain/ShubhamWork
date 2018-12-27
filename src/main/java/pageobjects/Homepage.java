@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 
 
 public class Homepage extends Page 
@@ -42,9 +42,9 @@ public class Homepage extends Page
 	public WebElement button_MyAccount() throws Exception {
 		try {
 			element = driver.findElement(By.xpath(".//*[@id='account']/a"));
-			AutomationLog.info("My Account Link is found on Home Page");
+			AutomationLogCustom.info("My Account Link is found on Home Page");
 		} catch (Exception e) {
-			AutomationLog.error("My Account Link is not found on Home Page");
+			AutomationLogCustom.error("My Account Link is not found on Home Page");
 			throw (e);
 		}
 		return element;

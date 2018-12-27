@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import Utilities.Configuration;
 import Utilities.ExcelLib;
 import Utilities.WaitFor;
@@ -156,7 +156,7 @@ public class AppDriver {
 		}
 		
 	    else if (!browserType.equalsIgnoreCase(PhantomJS) | !browserType.equalsIgnoreCase(CHROME) | !browserType.equalsIgnoreCase(FIREFOX) | !browserType.equalsIgnoreCase(RemoteChrome) | !browserType.equalsIgnoreCase(RemoteFirefox)) {
-	    	AutomationLog.error("Invalid browser name. Please check your browser Input");
+	    	AutomationLogCustom.error("Invalid browser name. Please check your browser Input");
 	    	clearBrowserContext(driver);
 	}
 
@@ -199,7 +199,7 @@ public class AppDriver {
 		}
 		catch(Exception ex)
 		{
-			AutomationLog.error(ex.getMessage());
+			AutomationLogCustom.error(ex.getMessage());
 		}
 	}
 }

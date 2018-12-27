@@ -19,7 +19,7 @@ import com.dropbox.core.v2.files.UploadSessionFinishErrorException;
 import com.dropbox.core.v2.files.UploadSessionLookupErrorException;
 import com.dropbox.core.v2.files.WriteMode;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import Utilities.Configuration;
 
 import java.io.File;
@@ -274,7 +274,7 @@ public class DropBoxAPI2Upload {
         try {
 			SendMailClass.execute();
 		} catch (Exception e) {
-			AutomationLog.error(e.getMessage());
+			AutomationLogCustom.error(e.getMessage());
 			e.printStackTrace();
 		}
        // System.exit(0);

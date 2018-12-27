@@ -13,7 +13,7 @@ import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
 import org.apache.commons.exec.ExecuteException;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 /**
  * Note : This Code only working and designed for Linux/Mac platform. Call/Use this class for linux/Mac platform only.
  * */
@@ -44,11 +44,11 @@ public class AWSUpload {
 	            iExitValue = oDefaultExecutor.execute(oCmdLine);
 	        } catch (ExecuteException e) {
 	            System.err.println("Execution failed.");
-	            AutomationLog.error("Error: " + e.getMessage());
+	            AutomationLogCustom.error("Error: " + e.getMessage());
 	            e.printStackTrace();
 	        } catch (IOException e) {
 	            System.err.println("permission denied.");
-	            AutomationLog.error("Error: " + e.getMessage());
+	            AutomationLogCustom.error("Error: " + e.getMessage());
 	            e.printStackTrace();
 	        }
 	    }
@@ -83,7 +83,7 @@ public class AWSUpload {
 	            out.close();
 	        }catch (Exception e){//Catch exception if any
 	            System.err.println("Error: " + e.getMessage());
-	            AutomationLog.error("Error: " + e.getMessage());
+	            AutomationLogCustom.error("Error: " + e.getMessage());
 	        }
 	        return fstream;
 

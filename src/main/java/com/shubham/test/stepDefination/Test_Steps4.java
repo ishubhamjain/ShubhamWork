@@ -7,7 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import automationframework.AutomationTestCaseVerification;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -57,7 +57,7 @@ public class Test_Steps4 extends AutomationTestCaseVerification{
 	public void afterMethod(Scenario scenario) {
 	    if(scenario.isFailed()) {
 	         scenario.embed(((TakesScreenshot)Page.driver).getScreenshotAs(OutputType.BYTES), "image/png");
-	         AutomationLog.error("Screenshot has been taken and embed with HTML report");
+	         AutomationLogCustom.error("Screenshot has been taken and embed with HTML report");
 	    }
 	}
 

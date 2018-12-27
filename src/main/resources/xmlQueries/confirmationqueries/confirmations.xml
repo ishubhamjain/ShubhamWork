@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature>
+	<scenarios>
+		<scenario>
+			<Step>
+				<queries>
+					<query name="SELECT_CFDB_CONFIRMATION_DEAL_STATE" type="query"><![CDATA[select * from test]]></query>
+					<query name="SELECT_CFDB_CONFIRMATION_DEAL_EVENT" type="query"><![CDATA[select * from test2]]></query>
+					<query name="SELECT_ECDB_PAPER_CONFIRMS_MESSAGE" type="query"><![CDATA[select * from test3]]></query>
+					<query name="SELECT_ECDB_DTCC_CONFIRMS_MESSAGE" type="query"><![CDATA[select * from test4]]></query>
+    				</queries>
+    			</Step>
+    		</scenario>
+    	</scenarios>
+    </feature>

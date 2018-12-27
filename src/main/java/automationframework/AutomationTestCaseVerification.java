@@ -7,7 +7,7 @@ import java.util.Collection;
 //import mailReport.MyReporterListener;
 //import mailReport.SendMailClass;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 
 public abstract class AutomationTestCaseVerification extends AutomationTestCase
 {
@@ -103,7 +103,7 @@ public abstract class AutomationTestCaseVerification extends AutomationTestCase
 
     private void handleTestCaseFailure(String message) throws Exception
     {
-        AutomationLog.error(message);
+        AutomationLogCustom.error(message);
  //       System.out.println("Faliure message = " +failureMessage());
         testcaseFailed(message);
 //        SendMailClass email = new SendMailClass();

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %level - %m%n%ex%n" />
+		</Console>
+		<RollingFile name="rollingfile" fileName="./logs/applicationlog.log"
+			filePattern="applicationlog-%d{MM-dd-yyyy}.log">
+			<PatternLayout pattern="%d %t %-5p %c{2} - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="log4jdbc_file" fileName="./logs/sql.log"
+			filePattern="sql-%d{MM-dd-yyyy}.log">
+			<PatternLayout pattern="%d %t %-5p %c{2} - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+		</RollingFile>
+		<!-- <File name="log4jdbc_file" fileName="log4jdbc.out"> <PatternLayout 
+			pattern="%d{HH:mm:ss.SSS} [%t] %level - %m%n%ex%n"/> </File> -->
+	</appenders>
+	<loggers>
+		<root level="info">
+			<appender-ref ref="Console" />
+			<appender-ref ref="rollingfile" />
+		</root>
+		<logger name="log4jdbc.log4j2" level="info" additivity="false">
+			<MarkerFilter marker="LOG4JDBC_JDBC" onMatch="DENY"
+				onMismatch="NEUTRAL" />
+			<appender-ref ref="rollingfile" />
+			<appender-ref ref="Console" />
+		</logger>
+	</loggers>
+</configuration>

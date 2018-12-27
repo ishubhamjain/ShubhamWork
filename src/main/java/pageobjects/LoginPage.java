@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Utilities.AutomationLog;
+import Utilities.AutomationLogCustom;
 import Utilities.Configuration;
 
 import org.junit.Assert;
@@ -37,7 +37,7 @@ public class LoginPage extends Page {
 			element = Homepage.homePage();
 
 		} catch (Exception e) {
-			AutomationLog.error("Login failed.");
+			AutomationLogCustom.error("Login failed.");
 			throw (e);
 		}
 		return element;
@@ -62,11 +62,11 @@ public class LoginPage extends Page {
   	//System.out.println("Login text = " +actual);
   	
   	if(actual.equals(expcted)){
-  		AutomationLog.error("Login details are invalid");
+  		AutomationLogCustom.error("Login details are invalid");
   		Assert.fail("Login details are invalid");
   	}
   	else {
-  		AutomationLog.info("Login Test passed");	
+  		AutomationLogCustom.info("Login Test passed");	
   	}
 }
 
@@ -95,7 +95,7 @@ public class LoginPage extends Page {
 			button_LoginToAccount().click();
 			Thread.sleep(5000);
 		} catch (Exception e) {
-			AutomationLog.error("Login Failed");
+			AutomationLogCustom.error("Login Failed");
 			throw (e);
 		}
 	}
@@ -104,9 +104,9 @@ public class LoginPage extends Page {
 		try {
 
 			element = driver.findElement(By.id("log"));
-			AutomationLog.info("Username text box found on the Login Page");
+			AutomationLogCustom.info("Username text box found on the Login Page");
 		} catch (Exception e) {
-			AutomationLog.error("UserName text box was not found on the Login Page");
+			AutomationLogCustom.error("UserName text box was not found on the Login Page");
 			throw (e);
 		}
 		return element;
@@ -115,9 +115,9 @@ public class LoginPage extends Page {
 	public WebElement txtbx_Password() throws Exception {
 		try {
 			element = driver.findElement(By.id("pwd"));
-			AutomationLog.info("Password text box found on the Login Page");
+			AutomationLogCustom.info("Password text box found on the Login Page");
 		} catch (Exception e) {
-			AutomationLog.error("Password text box was not found on the Login Page");
+			AutomationLogCustom.error("Password text box was not found on the Login Page");
 			throw (e);
 		}
 		return element;
@@ -127,9 +127,9 @@ public class LoginPage extends Page {
 		try {
 			element = driver.findElement(By.id("login"));
 		//	element = driver.findElement(By.id("loginnn"));
-			AutomationLog.info("Login to Account button found on the Login Page");
+			AutomationLogCustom.info("Login to Account button found on the Login Page");
 		} catch (Exception e) {
-			AutomationLog.error("Login to Account button was not found on the Login Page");
+			AutomationLogCustom.error("Login to Account button was not found on the Login Page");
 			throw (e);
 		}
 		return element;
@@ -138,9 +138,9 @@ public class LoginPage extends Page {
 	public WebElement button_SingOutToAccount() throws Exception {
 		try {
 			element = driver.findElement(By.xpath(".//*[@id='account_logout']/a"));
-			AutomationLog.info("SignOut Element Found");
+			AutomationLogCustom.info("SignOut Element Found");
 		} catch (Exception e) {
-			AutomationLog.error("SignOut Element not Found");
+			AutomationLogCustom.error("SignOut Element not Found");
 			throw (e);
 		}
 		return element;

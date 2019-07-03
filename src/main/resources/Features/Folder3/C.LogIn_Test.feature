@@ -21,7 +21,15 @@
 Feature: Testing Framework Action
 
 Scenario: Testing my Framework cases
-	Given Test1
-
-	Scenario: failtestcase
-	Given fail testase
+	Given Test3
+#
+#	Scenario: failtestcase
+#	Given fail testase
+#	
+#	Scenario: Testing my Framework cases test
+#	Given if username and password provoded
+#	When when user click on sign in button
+  #And click on robot radio button
+  #Then the user should able to login in application
+  
+  

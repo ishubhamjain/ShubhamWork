@@ -146,14 +146,21 @@
 			<version>1.2</version>
 		</dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.11.1</version>
-		</dependency>
+	    <dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>2.11.1</version>
+	    </dependency>
+	    <!-- https://mvnrepository.com/artifact/net.sourceforge.jtds/jtds -->
+	    <dependency>
+		   <groupId>net.sourceforge.jtds</groupId>
+		   <artifactId>jtds</artifactId>
+		   <version>1.3.1</version>
+	    </dependency>
 
 	</dependencies>
 	<build>
+	 <pluginManagement>
 		<!-- <sourceDirectory>src</sourceDirectory> -->
 		<plugins>
 			<plugin>
@@ -323,9 +330,11 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		</pluginManagement>
 	</build>
 	<description>/**
  * @author Shubham Jain
  * @Goal - mvn clean install exec:java -Dmaven.test.failure.ignore=false
+ * clean install -Dcucumber.options="classpath:Features/Folder1 classpath:Features/Folder2" --this can be use to trigger multiple folders
  * */</description>
 </project>

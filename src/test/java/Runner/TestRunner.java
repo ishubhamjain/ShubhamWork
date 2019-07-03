@@ -31,7 +31,8 @@ import pageobjects.Page;
 		outputFolder = "target"
 		)
 @CucumberOptions(
-		features = "classpath:Features"
+	//	features = "classpath:Features"
+		features = {"classpath:Features/Folder1","classpath:Features/Folder3"} 
 		//,glue={"stepDefinition"}
 		,glue=TestingConstants.GLUE
 		,plugin = { "pretty", "html:target/cucumber-default-report", "json:target/cucumber.json","junit:target/cucumber.xml"}

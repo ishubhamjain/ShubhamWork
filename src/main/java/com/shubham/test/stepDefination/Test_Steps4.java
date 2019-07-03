@@ -31,14 +31,21 @@ public class Test_Steps4 extends AutomationTestCaseVerification{
 		invoke();
 	}
 	
-	@When("^Test1$")
+	@Given("^Test1$")
     public void Test1() throws Exception
     {
+		System.out.println("Test1");
 
+    }
+	
+/*	@Given("^Test1$")
+    public void Test1() throws Exception
+    {
+		System.out.println("Test1");
 		WebDriverWait wait = new WebDriverWait(Page.driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(cueHome.By_link_Contact()));
-	/*	JavascriptExecutor executor = (JavascriptExecutor)Page.driver;
-		executor.executeScript("arguments[0].click();", cueHome.link_Contact());*/
+		JavascriptExecutor executor = (JavascriptExecutor)Page.driver;
+		executor.executeScript("arguments[0].click();", cueHome.link_Contact());
 		System.out.println("Test1");
 		cueHome.link_Contact().click();
 	//	cueHome.link_Contact().sendKeys("shubham stack");
@@ -46,6 +53,19 @@ public class Test_Steps4 extends AutomationTestCaseVerification{
 		cpage.textbox_email().sendKeys("shubham.jain@cuelogic.co.in");
 		//cpage.textbox_message().sendKeys("8421485744");
 		cpage.textbox_message().sendKeys("cuelogic");
+    }*/
+	
+	@Given("^Test2$")
+    public void Test2() throws Exception
+    {
+		System.out.println("Test2");
+
+    }
+	
+	@Given("^Test3$")
+    public void Test3() throws Exception
+    {
+		System.out.println("Test3");
     }
 	
 	@Given("^fail testase$")
